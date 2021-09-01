@@ -1,0 +1,33 @@
+export const colors = {
+  info: "#0dcaf0",
+  white: "#ffffff",
+  black: "#000000",
+  danger: "#dc3545",
+  border: "#00000020",
+  primary: "#0d6efd",
+  warning: "#ffc107",
+  success: "#198754",
+  disabled: "#6c757d",
+  secondary: "#41464b",
+  infoLight: "#b6effb",
+  dangerLight: "#f5c2c7",
+  infoLighter: "#cff4fc",
+  successLight: "#badbcc",
+  primaryLight: "#b6d4fe",
+  warningLight: "#ffecb5",
+  dangerLighter: "#f8d7da",
+  primaryLighter: "#cfe2ff",
+  secondaryLight: "#d3d6d8",
+  successLighter: "#d1e7dd",
+  warningLighter: "#fff3cd",
+  secondaryLighter: "#e2e3e5",
+};
+
+export const gutter = {
+  small: "10px",
+  large: "40px",
+  larger: "80px",
+  medium: "20px",
+  smaller: "5px",
+  xl_large: "100px",
+};
