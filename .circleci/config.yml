@@ -40,6 +40,13 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
+
+      - run:
+          name: Git config
+          command: |
+            git config --global user.email $gitHubEmail
+            git config --global user.name $gitHubUsername
+
       - run:
           name: Release
           command: |
