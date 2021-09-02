@@ -75,6 +75,10 @@ jobs:
           name: Run tests
           command: yarn unit
 
+      - run:
+          name: Bundle code
+          command: yarn build
+
       - save_cache:
           paths:
             - node_modules
@@ -84,18 +88,18 @@ jobs:
           root: ~/repo
           paths: .
 
-  build:
-    <<: *defaults
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/repo
-      - run:
-          name: Bundle code
-          command: yarn build
-      - persist_to_workspace:
-          root: ~/repo
-          paths: .
+  # build:
+  #   <<: *defaults
+  #   steps:
+  #     - checkout
+  #     - attach_workspace:
+  #         at: ~/repo
+  #     - run:
+  #         name: Bundle code
+  #         command: yarn build
+  #     - persist_to_workspace:
+  #         root: ~/repo
+  #         paths: .
 
   deploy:
     <<: *defaults
@@ -128,7 +132,7 @@ workflows:
       - deploy:
           requires:
             - test
-            - build
+            # - build
           filters:
             tags:
               only: /^v.*/
