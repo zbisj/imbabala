@@ -1,39 +1,103 @@
+# version: 2.1
+# jobs:
+#   test:
+#     docker:
+#       - image: node:12.13.0
+
+#     working_directory: ~/repo
+
+#     steps:
+#       - checkout
+
+#       # Download and cache dependencies
+#       - restore_cache:
+#           keys:
+#             - v1-dependencies-{{ checksum "package.json" }}
+#             # fallback to using the latest cache if no exact match is found
+#             - v1-dependencies-
+
+#       - run:
+#           name: Installing dependencies
+#           command: yarn install
+
+#       - save_cache:
+#           paths:
+#             - node_modules
+#           key: v1-dependencies-{{ checksum "package.json" }}
+
+#       - run:
+#           name: Unit Tests
+#           command: yarn unit
+#   build:
+#     steps:
+#     - run:
+#             name: Production build
+#             command: yarn build
+
+#         - run:
+#             name: Publish to NPM
+#             command: |
+#               npm set //registry.npmjs.org/:_authToken=$npm_TOKEN
+#               npm publish
+
+# workflows:
+#   deploy-build:
+#     jobs:
+#       - npm-deploy:
+#           filters:
+#             tags:
+#               only: /^v.*/
+#             branches:
+#               only:
+#                 - main
+
 version: 2.1
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: node:12.13.0
+
 jobs:
-  npm-deploy:
-    docker:
-      - image: node:12.13.0
-
-    working_directory: ~/repo
-
+  test:
+    <<: *defaults
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
+      - run: npm install
       - run:
-          name: Installing dependencies
-          command: yarn install
+          name: Run tests
+          command: yarn unit
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      - run:
-          name: Unit Tests
-          command: yarn unit
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
 
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
       - run:
-          name: Production build
+          name: Bundle code
           command: yarn build
 
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: Publish to NPM
           command: |
@@ -41,10 +105,20 @@ jobs:
             npm publish
 
 workflows:
-  deploy-build:
+  version: 2
+  test-deploy:
     jobs:
-      - npm-deploy:
+      - test:
           filters:
+            tags:
+              only: /^v.*/
+      - deploy:
+          requires:
+            - test
+            - build
+          filters:
+            tags:
+              only: /^v.*/
             branches:
-              only:
-                - main
+              # ignore: /.*/
+              only: main
