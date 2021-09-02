@@ -87,17 +87,26 @@ jobs:
   build:
     <<: *defaults
     steps:
+      - checkout
       - attach_workspace:
           at: ~/repo
       - run:
           name: Bundle code
           command: yarn build
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
 
   deploy:
     <<: *defaults
     steps:
       - attach_workspace:
           at: ~/repo
+      - run:
+          name: Release
+          command: |
+            yarn release 
+            git push --follow-tags origin main
       - run:
           name: Publish to NPM
           command: |
