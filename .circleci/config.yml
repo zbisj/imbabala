@@ -125,10 +125,10 @@ workflows:
           filters:
             tags:
               only: /^v.*/
-      - build:
-          filters:
-            branches:
-              only: main
+      # - build:
+      #     filters:
+      #       branches:
+      #         only: main
       - deploy:
           requires:
             - test
