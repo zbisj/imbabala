@@ -38,6 +38,9 @@ jobs:
   deploy:
     <<: *defaults
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDT9HZVkO5VYzcMZrbe5ekfSJZbgZlxm9PczsQyJJO8sgHFjHe9nISZMvVXV/gTP7CLm8qWFqGmmlOwxQEaxQrb0DpUykVq/hAUNKGyJjz6GuKWniGJzIfPJq+v/aD+y41CxTkqWRwRqIJxmJ/8U6D5oW1TzAM/cqDBs/40ckF2dja9AvGB4b1OeMPM3msVTe9oV7m5Qh+T6WoejUCpJhendcuwLWbtbzxlF5IOPFzjoYzZhpO4+acWkC0HK/st1jXr7r3X73+RrnUvV2mcKQnGCjt0V8nG2SSAMMv8VU9TPAZ/1GXznMg6V+PD5xRFZIpMXAxCcHpWMfzkr3QjYEg2gKGuArTsQmL/V6Dao39D/0OZW10gZDKK5+1EXcx4gf/pahMwnbF/2NxiFeYpUuqzBwbts/eQMedMUG0ZdeZ3oedHrnrESqmE0tqSVf+9uA6RQdGFS6zihSPmpTC8qunpuE7IVjfHkaN4Lj5nFm8y8+ZjR4zY8S5JOb+IqDmhGSE= sibabale@sibabale"
       - attach_workspace:
           at: ~/repo
 
