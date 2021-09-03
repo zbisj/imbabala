@@ -52,11 +52,9 @@ jobs:
 
       - run:
           name: Release
-          command: yarn release &&
-            git push --follow-tags origin main
-      - run:
-          name: Publish to NPM
           command: |
+            yarn release
+            git push --follow-tags origin main
             npm set //registry.npmjs.org/:_authToken=$npm_TOKEN
             npm publish
 
