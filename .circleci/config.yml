@@ -49,8 +49,7 @@ jobs:
 
       - run:
           name: Release
-          command: |
-            yarn release 
+          command: yarn release &&
             git push --follow-tags origin main
       - run:
           name: Publish to NPM
