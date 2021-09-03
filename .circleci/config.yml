@@ -51,10 +51,8 @@ jobs:
             git config --global user.name $gitHubUsername
 
       - run:
-          name: Release
+          name: Publish to NPM
           command: |
-            yarn release
-            git push --follow-tags origin main
             npm set //registry.npmjs.org/:_authToken=$npm_TOKEN
             npm publish
 
