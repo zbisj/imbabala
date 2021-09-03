@@ -38,6 +38,9 @@ jobs:
   deploy:
     <<: *defaults
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - $SSH_FINGERPRINT_KEY
       - attach_workspace:
           at: ~/repo
 
