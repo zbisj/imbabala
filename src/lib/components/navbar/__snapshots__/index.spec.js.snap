@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar renders correctly 1`] = `
+<ul
+  className=""
+>
+  <li
+    className=""
+  >
+    <a
+      className=""
+      href="#"
+    >
+      Link
+    </a>
+  </li>
+  <li
+    className=""
+  >
+    <a
+      className=""
+      href="#"
+    >
+      Link
+    </a>
+  </li>
+  <li
+    className=""
+  >
+    <a
+      className=""
+      disabled={true}
+      href="#"
+    >
+      Link
+    </a>
+  </li>
+</ul>
+`;

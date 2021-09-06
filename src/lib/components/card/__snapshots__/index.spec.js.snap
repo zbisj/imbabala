@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders correctly 1`] = `
+<div
+  className=""
+>
+  <img
+    className=""
+    src="https=//bit.ly/3Au6jS4"
+  />
+  <div
+    className=""
+  >
+    <h4
+      className=""
+    >
+      Heading
+    </h4>
+    <p>
+      Irure aliquip qui cupidatat veniam aliquip id deserunt id irure Lorem do minim eiusmod. Mollit irure incididunt anim fugiat cillum deserunt ex commodo enim pariatur. Dolor ut ea aliquip pariatur dolore esse laboris enim laborum do et velit.
+    </p>
+    <div
+      className=""
+    >
+      <button
+        className=""
+      >
+        Click Me
+      </button>
+    </div>
+  </div>
+</div>
+`;
