@@ -4,42 +4,36 @@
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+## About
+
+Imbabala is South African (Xhosa, Zulu, Hlubi) word meaning a bushbuck (Tragelaphus scriptus) is a common and a widespread species of antelope in Sub-Saharan Africa. Bushbuck are found in a wide range of habitats, such as rain forests, montane forests, forest-savanna mosaic, savanna, bushveld and woodland.[3] Bushbuck stand about 90 centimetres (35 in) at the shoulder and weigh from 45 to 80 kilograms (99 to 176 lb). They are generally solitary, territorial browsers.
+
+I named this library Imbabala becuase it my family's (Dlomo) totem and it is a beautiful animal with subtle features and its is independent, fast and agile.
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn dev`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs [https://storybook.js.org/](Storybook) in the development mode.\
+Open [http://localhost:5555](http://localhost:5555) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ### `yarn unit`
 
-Launches the test runner in the interactive watch mode.\
+Launches the tests on all the components using [https://jestjs.io/](Jest.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `lib` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
