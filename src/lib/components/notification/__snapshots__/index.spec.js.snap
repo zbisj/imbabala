@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification renders correctly 1`] = `
+<div
+  className=""
+>
+  <h3
+    className=""
+  >
+    heading
+  </h3>
+  <p
+    className=""
+  >
+    content
+  </p>
+</div>
+`;

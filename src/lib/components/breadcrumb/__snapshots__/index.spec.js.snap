@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb renders correctly 1`] = `
+<ul
+  className=""
+>
+  <li
+    className=""
+  >
+    <a
+      className=""
+      href="https://youtube.com/"
+    >
+      YouTube
+    </a>
+    <span
+      className=""
+    >
+      /
+    </span>
+  </li>
+  <li
+    className=""
+  >
+    <a
+      className=""
+      href="https://youtube.com/"
+    >
+      YouTube
+    </a>
+    <span
+      className=""
+    >
+      /
+    </span>
+  </li>
+</ul>
+`;

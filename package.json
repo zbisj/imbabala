@@ -27,8 +27,12 @@
     "start": "react-scripts start",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files ",
     "commit": "cz",
+    "deploy": "yarn build && yarn release",
     "release": "standard-version",
     "coverage": "jest --coverage",
+    "postinstall": "husky install",
+    "postpublish": "pinst --enable",
+    "prepublishOnly": "pinst --disable",
     "build-storybook": "build-storybook -s public"
   },
   "config": {
@@ -38,6 +42,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "yarn unit",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -79,6 +84,8 @@
     "@storybook/node-logger": "^6.3.7",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.7",
+    "husky": "^7.0.2",
+    "pinst": "^2.1.6",
     "standard-version": "^9.3.1"
   }
 }

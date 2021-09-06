@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListGroup renders correctly 1`] = `
+<ul
+  className=""
+>
+  <li
+    className=""
+  >
+    List Item
+  </li>
+</ul>
+`;
