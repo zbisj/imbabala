@@ -10,57 +10,66 @@ Imbabala is South African (Xhosa, Zulu, Hlubi) word meaning a bushbuck (Tragelap
 
 I named this library Imbabala becuase it my family's (Dlomo) totem and it is a beautiful animal with subtle features and its is independent, fast and agile.
 
-## Available Scripts
+### Install
 
 In the project directory, you can run:
 
-### `yarn dev`
+#### yarn
 
-Runs [https://storybook.js.org/](Storybook) in the development mode.\
-Open [http://localhost:5555](http://localhost:5555) to view it in the browser.
+` yarn add mbabala`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### npm
 
-### `yarn unit`
+` npm install mbabala`
 
-Launches the tests on all the components using [https://jestjs.io/](Jest.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Usage
 
-### `yarn build`
+Here is a quick example to get you started:
 
-Builds the app for production to the `lib` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Button } from "mbabala";
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+function App() {
+  return <Button label="Hello World" variant="primary" />;
+}
 
-## Learn More
+ReactDOM.render(<App />, document.querySelector('#app'));
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Examples
 
-### Code Splitting
+I am yet to deploy a examples website.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- TODO -->
+<!-- Are you looking for an example project to get started? Try these ones. -->
 
-### Analyzing the Bundle Size
+## Documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- TODO -->
 
-### Making a Progressive Web App
+I am yet to deploy a documentation website.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- Check out our documentation website. -->
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Although my plans are to open-source this project at this point I have not yet create a set of guidelines for contributors. If anyone is intrested in doing that they can fork and create a pull request.
 
-### Deployment
+<!-- Read the contributing guide to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to Imbabala.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Notice that contributions go far beyond pull requests and commits. Although we love giving you the opportunity to put your stamp on Imbabala, we also are thrilled to receive a variety of other contributions. -->
 
-### `yarn build` fails to minify
+## Changelog
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have recently updated, please read the [changelog](https://github.com/zbisj/imbabala/blob/main/CHANGELOG.md) for details of what has changed.
+
+## Roadmap
+
+A roadmap for the future plans and high priority features and enhancements is yet to be created.
+
+## License
+
+This project is licensed under the terms of the MIT license.
