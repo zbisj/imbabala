@@ -16,11 +16,11 @@ In the project directory, you can run:
 
 #### yarn
 
-` yarn add mbabala`
+` yarn add imbabala`
 
 #### npm
 
-` npm install mbabala`
+` npm install imbabala`
 
 ### Usage
 
@@ -29,7 +29,7 @@ Here is a quick example to get you started:
 ```sh
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from "mbabala";
+import { Button } from "imbabala";
 
 function App() {
   return <Button label="Hello World" variant="primary" />;
