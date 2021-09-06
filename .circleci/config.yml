@@ -71,7 +71,3 @@ workflows:
           filters:
             tags:
               only: /^v.*/
-            branches:
-              # ignore: /.*/
-              only:
-                - main
