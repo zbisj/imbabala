@@ -57,7 +57,7 @@ jobs:
           name: Publish to NPM
           command: |
             npm set //registry.npmjs.org/:_authToken=$npm_TOKEN
-            npm publish && yarn postpublish
+            npm install --unsafe-perm && npm publish && yarn postpublish
 
 workflows:
   version: 2
