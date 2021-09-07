@@ -21,7 +21,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "cm": "cz",
+    "commit": "cz",
     "dev": "start-storybook -p 6006 -s public",
     "unit": "jest",
     "eject": "react-scripts eject",
@@ -30,9 +30,6 @@
     "deploy": "yarn build && yarn release",
     "release": "standard-version",
     "coverage": "jest --coverage",
-    "postinstall": "husky install",
-    "postpublish": "pinst --enable",
-    "prepublishOnly": "pinst --disable",
     "build-storybook": "build-storybook -s public"
   },
   "husky": {
